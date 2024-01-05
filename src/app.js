@@ -31,10 +31,14 @@ app.get("/api/v1/products/:name/:price", (req,res)=>{
     
       console.log("user status",user);
       if(user){
-        res.status(200).json(user);
+        res.status(200).json({"status": "success", 
+
+        "message": "Product fetched successfully",
+    
+        "data": user});
       }
       else{
-        res.status(404).send("Product not found");
+        res.status(404).json({"status": "failed", "message": "Product not found!"});
       }
 })
 
