@@ -19,8 +19,8 @@ products.forEach((product) => {
 app.get("/api/v1/products/:name/:price", (req,res)=>{
       let {name,price}=req.params;
 
-      name=name.slice(1);
-      price=price.slice(1);
+    //   name=name.slice(1);
+    //   price=price.slice(1);
       console.log("values from params",name," ",price);
 
 
